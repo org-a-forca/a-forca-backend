@@ -34,7 +34,7 @@ public class TrabalhadorController {
   }
 
   @GetMapping
-  public ResponseEntity<Object> getAll(@RequestParam(required = false) String nome, @RequestParam(required = false) String servico, @RequestParam(required = false, defaultValue = "0") Integer pagNum, @RequestParam(required = false, defaultValue = "5") Integer pagTam) {
+  public ResponseEntity<Object> getAll(@RequestParam(required = false) String nome, @RequestParam(required = false) String servico, @RequestParam(required = false, defaultValue = "0") Integer pagNum, @RequestParam(required = false, defaultValue = "1000") Integer pagTam) {
     List<TrabalhadorResumoDto> trabalhadores = trabalhadorService.getAll(nome, servico, pagNum, pagTam);
     Map<String, Object> corpoDaResposta = new HashMap<>();
 
