@@ -41,7 +41,7 @@ public class ContratoController {
   }
 
   @GetMapping
-  public ResponseEntity<Object> getAll(@RequestParam(required = false, defaultValue = "0") Integer pagNum, @RequestParam(required = false, defaultValue = "5") Integer pagTam) {
+  public ResponseEntity<Object> getAll(@RequestParam(required = false, defaultValue = "0") Integer pagNum, @RequestParam(required = false, defaultValue = "1000") Integer pagTam) {
     List<ContratoResumoDto> contratos = contratoService.getAll(pagNum, pagTam);
     Map<String, Object> corpoDaResposta = new HashMap<>();
 

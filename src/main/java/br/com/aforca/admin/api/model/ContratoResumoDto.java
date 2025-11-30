@@ -9,10 +9,13 @@ import java.time.LocalDate;
 @Data
 @NoArgsConstructor
 public class ContratoResumoDto {
+
+  private Long id;
   private String nomeTrabalhador;
   private LocalDate dataContrato;
 
   public ContratoResumoDto(Contrato contrato) {
+    this.id = contrato.getId();
     this.nomeTrabalhador = contrato.getTrabalhador().getNome();
     this.dataContrato = contrato.getData();
   }

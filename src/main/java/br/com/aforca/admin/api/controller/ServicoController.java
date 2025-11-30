@@ -48,7 +48,7 @@ public class ServicoController {
   }
 
   @GetMapping
-  public ResponseEntity<Object> getAll(@RequestParam(required = false) String nome, @RequestParam(required = false, defaultValue = "0") Integer pagNum, @RequestParam(required = false, defaultValue = "5") Integer pagTam) {
+  public ResponseEntity<Object> getAll(@RequestParam(required = false) String nome, @RequestParam(required = false, defaultValue = "0") Integer pagNum, @RequestParam(required = false, defaultValue = "1000") Integer pagTam) {
     List<ServicoResumoDto> servicos = servicoService.getAll(nome, pagNum, pagTam);
     Map<String, Object> corpoDaResposta = new HashMap<>();
 
